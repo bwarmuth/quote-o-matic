@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    %title Quote-O-Matic
+    /[if lt IE 9]
+      %script{:type => "text/javascript", :src => "http://html5shim.googlecode.com/svn/trunk/html5.js"}
+    = stylesheet_link_tag    "application", :media => "all"
+    = csrf_meta_tags
+    
+  %body(data-controller="#{controller_name}" data-action="#{action_name}")
+    .row
+      .small-12.columns
+        = render 'shared/header'
+    .row
+      .small-12.columns
+        = yield
+    .row
+      .small-12.columns
+        = render 'shared/footer'
+    = javascript_include_tag "application"
