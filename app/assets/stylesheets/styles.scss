@@ -1,1 +1,186 @@
-h4{color:green}
+// Variables
+
+// Colors
+
+$white: #e6e6e6;
+$black: #333333;
+$dark-grey: #5f5f62;
+$med-blue: #7798c5;
+$orange: #f3901d;
+
+$success: #92C04E;
+$failure: #DB4931;
+
+// Fonts
+$main-font: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+$bold: bold;
+
+
+
+// All Pages
+
+body {
+  font-family: $main-font;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: $med-blue;
+  &:hover {
+    color: $black;
+  }
+}
+
+
+// Top Bar
+
+.top-bar {
+	box-shadow: 0px 3px 2px #888;
+	background-color: $dark-grey;
+  ul>li a:not(.button) {
+    height: 45px;
+    padding: 0 15px;
+    line-height: 45px;
+    font-size: 13px;
+  }
+  img {
+    width: 150px;
+    vertical-align: middle;
+  }
+}
+.top-bar-section {
+  ul {
+    background: transparent;
+  }
+  li:not(.has-form) a:not(.button) {
+    background: transparent;
+  }
+}
+
+
+// Sub Nav
+
+.sub-nav {
+  background: $dark-grey;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 0px;
+  padding: 0;
+  dd {
+    margin-left: 0;
+    margin-bottom: 0;
+    height: 100%;
+    border-right: solid 1px #acaeb0;
+    line-height: 38px;
+    &.active {
+      background: $med-blue;
+      border-color: lighten($med-blue, 10);
+      a {
+        background: transparent;
+        border-radius: none;
+        padding: 0 20px;
+        display: block;
+      }
+    }
+    &:hover {
+      background: $black;
+    }
+  }
+  dd a {
+    color: $white;
+    text-decoration: none;
+    padding: 0.1875rem 1rem;
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+
+// Alert Boxes
+
+.alert-box {
+    font-weight: bold;
+    text-shadow: 0 -1px rgba(0,0,0,0.3);
+    margin-top: 1.5em;
+  &.success {
+    background: $success;
+    border: 1px solid darken($success, 10);
+    display: none;
+  }
+  &.failure {
+    background: $failure;
+    border: 1px solid darken($failure, 10);
+    display: none;
+  }
+}
+
+
+
+// Sign In
+
+.sign-in {
+  text-align: center;
+  font-size: 13px;
+  font-weight: normal;
+  margin-top: 1.5em;
+  a#google_apps {
+    background: url('google_up.png') no-repeat;
+    font-size: 38px;
+    &:hover {
+      background: url('google_over.png') no-repeat;
+    }
+  }
+}
+.bold {
+  font-weight: $bold;
+}
+
+
+// Content
+
+.container {
+  padding-top: 30px;
+}
+
+
+
+// Tables
+
+table {
+  border: none;
+  border-collapse: collapse;
+  tbody tr td {
+    color: $dark-grey;
+  }
+  thead {
+    background: none;
+    tr th {
+      border-bottom: solid 1px $white;
+    }
+  }
+}
+table.my-quote-table {
+  width: 100%;
+  th.id {
+    width: 60px;
+  }
+  th.status {
+    width: 120px;
+  }
+  th.value {
+    width: 200px;
+  }
+  .label {
+    width: 100%;
+    font-size: 1em;
+    &.accept {
+      background: $med-blue;
+    }
+    &.sent {
+      background: $orange;
+    }
+    &.complete {
+      background: $success;
+    }
+  }
+}

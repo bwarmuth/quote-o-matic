@@ -1,1 +1,19 @@
-%h4 Woot Login
+.row 
+  .small-12.medium-12.columns 
+    .alert-box.success{"data-alert" => ""} 
+      Sign Out Successful
+      %a.close{:href => "#"} &times;
+.row 
+  .small-12.medium-12.columns 
+    .alert-box.failure{"data-alert" => ""} 
+      Invalid email or password.
+      %a.close{:href => "#"} &times;
+.row 
+  .small-10.medium-10.columns.small-centered.medium-centered 
+    %p.sign-in 
+      CLICK TO SIGN IN
+      %a#google_apps{:href => "pages/myquotes.html"} 
+        = image_tag "google_trans.png", {alt:"Log In"}
+      WITH
+      %span.bold 
+        @TOPGUNHQ

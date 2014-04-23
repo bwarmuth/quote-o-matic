@@ -9,12 +9,11 @@
     = csrf_meta_tags
     
   %body(data-controller="#{controller_name}" data-action="#{action_name}")
-    .row
-      .small-12.columns
-        = render 'shared/header'
-    .row
-      .small-12.columns
-        = yield
+    = render 'shared/header'
+    .container
+      .row
+        .small-12.columns
+          = yield
     .row
       .small-12.columns
         = render 'shared/footer'
