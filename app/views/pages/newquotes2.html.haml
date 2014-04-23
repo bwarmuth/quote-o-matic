@@ -1,0 +1,73 @@
+.row 
+  .small-12.medium-12.columns 
+    .alert-box.success{"data-alert" => ""} 
+      Success.
+      %a.close{:href => "#"} &times;
+.row 
+  .small-12.medium-12.columns 
+    .alert-box.failure{"data-alert" => ""} 
+      I AM ERROR.
+      %a.close{:href => "#"} &times;
+.row 
+  .small-12.medium-12.columns
+    %dl.sub-nav 
+      %dd 
+        %a{:href => "#"} All Quotes
+      %dd.active 
+        %a{:href => "#"} My Quote
+      %dd 
+        %a{:href => "#"} New Quotes
+      %dd.right 
+        %a{:href => "#"} Filter/Search
+.row 
+  .small-12.medium.12.columns 
+    %ul.pagination.new-steps 
+      %li.unavailable.complete 
+        %a{:href => "#"} 1
+        %span.step-text 
+          Select Type
+      %li.current 
+        %a{:href => "#"} 2
+        %span.step-text 
+          Select Company
+      %li.unavailable 
+        %a{:href => "#"} 3
+        %span.step-text 
+          Select Contact
+      %li.unavailable 
+        %a{:href => "#"} 4
+        %span.step-text 
+          Select Opportunity
+      %li.unavailable 
+        %a{:href => "#"} 5
+        %span.step-text 
+          Select Reseller
+      %li.unavailable 
+        %a{:href => "#"} 6
+        %span.step-text 
+          Add SKUs
+      %li.unavailable 
+        %a{:href => "#"} 7
+        %span.step-text 
+          Complete
+    %hr/ 
+.row 
+  .small-12.medium-12.columns 
+    %p Instructional text goes here
+.row 
+  .small-12.medium-12.columns 
+    %form{:action => ""} 
+      .row 
+        .small-5.medium-5.columns 
+          %select#type{:name => "Select Company"} 
+            %option{:value => "Select Company"} Select Company
+            %option{:value => "Type 1"} Type 1
+        .small-7.medium-7.columns 
+          %a.button.small.back{:href => "#"} Back
+          %a.button.small.next{:href => "#"} Next
+.row 
+  .small-2.medium-2.columns 
+    .bold
+      Quote Type:
+  .small-10.medium-10.columns
+    User's Choice

@@ -71,18 +71,22 @@ a {
     height: 100%;
     border-right: solid 1px #acaeb0;
     line-height: 38px;
+    &:hover {
+      background: $black;
+    }
     &.active {
       background: $med-blue;
       border-color: lighten($med-blue, 10);
       a {
         background: transparent;
-        border-radius: none;
+        border-radius: 0;
         padding: 0 20px;
         display: block;
+        &:hover {
+          background: $med-blue;
+          border-radius: 0;
+        }
       }
-    }
-    &:hover {
-      background: $black;
     }
   }
   dd a {
@@ -143,6 +147,73 @@ a {
 }
 
 
+// New Quote Breadcrumb
+
+// ul.quote-steps {
+//   text-align: center;
+//   li {
+//     display: inline-block;
+//     padding: 0 1.4em;
+//   }
+// }
+ul {
+  text-align: center;
+  &.new-steps {
+    height: auto;
+    position: relative;
+    z-index: 2;
+    li {
+      float: none;
+      display: inline-block;
+      text-align: center;
+      padding: .5em 0;
+      margin-left: .5em;
+      height: auto;
+      margin-right: .5em;
+      width: 12%;
+      line-height: 1.5em;
+      a {
+        font-size: 1.3em;
+      }
+      &.unavailable {
+        border: 1px solid darken($white, 10);
+        background: $white;
+        color: darken($white, 20);
+      }
+      &.complete {
+        border: 1px solid darken($success, 10);
+        background: $success;
+        color: #fff;
+        a {
+          color: #fff;
+        }
+      }
+      &.current {
+        background: $med-blue;
+        color: #fff;
+        border: 1px solid lighten($med-blue, 10);
+        font-weight: bold;
+        a {
+          background: transparent;
+          &:hover {
+            background: transparent;
+          }
+        }
+      }
+    }
+    span.step-text {
+      display: block;
+      text-align: center;
+      padding: 0 .4em;
+    }
+  }
+}
+hr {
+  position: relative;
+  top: -50px;
+  z-index: 1;
+  border: 1px solid darken($white, 20);
+}
 
 // Tables
 
