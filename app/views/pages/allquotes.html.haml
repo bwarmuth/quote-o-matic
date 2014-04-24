@@ -17,11 +17,53 @@
         %a{:href => "#"} My Quote
       %dd 
         %a{:href => "#"} New Quotes
-      %dd.right 
-        %a{:href => "#"} Filter/Search
+      %dd.right.active 
+        %a{:href => "#"} Advanced Options
+      %dd.search.right 
+        %input{:type => "text", :placeholder => "Filter/Search"}/ 
 .row 
-  %small-12.medium-12.columns 
-    %table.my-quote-table 
+  .small-7.small-offset-5.columns 
+    .filter  
+      .row 
+        .small-12.medium-12.columns 
+          %label.bold{:for => "Sort Order"} Sort Order
+          %input{:type => "radio", :name => "Ascending", :value => "Ascending", :id => "Ascending"}/
+          %label{:for => "Ascending"} Ascending
+          %input{:type => "radio", :name => "Descending", :value => "Descending", :id => "Descending"}/
+          %label{:for => "Descending"} Descending
+      .row 
+        .small-4.medium-4.columns 
+          %label.bold{:for => "Status"} Status
+          %select#Status{:name => "Status"} 
+            %option{:value => "Select Status"} Select Status
+            %option{:value => "First choice"} First Choice
+        .small-4.medium-4.columns 
+          %label.bold{:for => "Agent"} Agent
+          %select#Agent{:name => "Agent"} 
+            %option{:value => "Select Agent"} Select Agent
+            %option{:value => "First choice"} First Choice
+        .small-4.medium-4.columns 
+          %label.bold{:for => "Company"} Company
+          %select#Company{:name => "Company"} 
+            %option{:value => "Select Company"} Select Company
+            %option{:value => "First choice"} First Choice
+      .row 
+        .small-6.medium-6.columns 
+          %label.bold{:for => "Status"} Date
+          %input{:type => "radio", :name => "Sent", :value => "Sent", :id => "Sent"}/
+          %label{:for => "Sent"} Sent
+          %input{:type => "radio", :name => "Accepted", :value => "Accepted", :id => "Accepted"}/
+          %label{:for => "Accepted"} Accepted
+          %input{:type => "radio", :name => "Completed", :value => "Completed", :id => "Completed"}/
+          %label{:for => "Completed"} Completed
+        .small-3.medium-3.columns 
+          %label.bold{:for => "Value"} Value
+          %input.min{:type => "text", :placeholder => "Min"}/
+        .small-3.medium-3.columns
+          %input.max{:type => "text", :placeholder => "Max"}/ 
+.row 
+  .small-12.medium-12.columns 
+    %table.my-quote-table.sortable 
       %thead 
         %tr 
           %th.id 
@@ -47,6 +89,20 @@
           %td $$$$$$$$$$$$
           %td 
             %span.label.accept Accepted 
+        %tr.expander 
+          %td{:colspan => "3"} 
+          %td{:colspan => "3"} 
+            %table 
+              %thead
+                %tr 
+                  %th Orders
+                  %th Itemized Value
+                  %th Detailed Status
+              %tbody 
+                %tr 
+                  %td XX-XXXX-XX
+                  %td $X,XXX.XX
+                  %td Sent: Date
         %tr 
           %td #####
           %td Customer Name
@@ -101,4 +157,4 @@
       %li.arrow 
         %a{:href => "#"} Last &raquo;
   .small-2.medium-2.columns 
-    %a.button.tiny.right{:href => "#"} Export All 
+    %input.button.tiny.right.export{:type => "button", :value => "Export"}/ 

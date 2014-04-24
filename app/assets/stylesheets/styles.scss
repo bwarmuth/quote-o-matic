@@ -22,6 +22,7 @@ $bold: bold;
 body {
   font-family: $main-font;
   -webkit-font-smoothing: antialiased;
+  padding-top: 45px;
 }
 a {
   color: $med-blue;
@@ -64,6 +65,7 @@ a {
   height: 40px;
   margin-top: 20px;
   margin-left: 0px;
+  margin-bottom: 0px;
   padding: 0;
   dd {
     margin-left: 0;
@@ -71,6 +73,17 @@ a {
     height: 100%;
     border-right: solid 1px #acaeb0;
     line-height: 38px;
+    &.search {
+      width: 44%;
+      input {
+        height: 30px;
+        margin: 5px;
+        width: 98%;
+      }
+      &:hover {
+        background: $dark-grey;
+      }
+    }
     &:hover {
       background: $black;
     }
@@ -140,6 +153,24 @@ a {
 }
 
 
+// Pagination
+
+ul.pagination {
+  li.current a {
+    background: $med-blue;
+    &:hover {
+      background: lighten($med-blue, 10);
+    }
+  }
+  li a {
+    border-radius: 0;
+  }
+  li {
+    color: #999;
+  }
+}
+
+
 // Content
 
 .container {
@@ -162,6 +193,7 @@ ul {
     height: auto;
     position: relative;
     z-index: 2;
+    padding-top: 1.125rem;
     li {
       float: none;
       display: inline-block;
@@ -241,17 +273,81 @@ table.my-quote-table {
   th.value {
     width: 200px;
   }
+  .expander table {
+    width: 100%;
+    margin-bottom: 0px;
+  }
   .label {
     width: 100%;
     font-size: 1em;
     &.accept {
       background: $med-blue;
+      font-weight: bold;
     }
     &.sent {
       background: $orange;
+      font-weight: bold;
     }
     &.complete {
       background: $success;
+      font-weight: bold;
     }
   }
+}
+table.sku-table {
+
+}
+
+
+// Form Elements
+
+input {
+  &.export {
+  background-color: $white;
+  border-color: darken($white, 10);
+  color: $black;
+    &:hover {
+      background-color: darken($white, 15);
+      color: $black;
+    }
+    &:focus {
+      background-color: darken($white, 15);
+      color: $black;
+    }
+  }
+  &.back {
+    background-color: darken($white, 10);
+    border: darken($white, 20);
+    color: $black;
+    &:hover {
+      background-color: darken($white, 20);
+      color: $black;
+    }
+    &:focus {
+      background-color: darken($white, 20);
+      color: $black;
+    }
+  }
+  &.next {
+    background-color: $orange;
+    border: darken($orange, 10);
+    &:hover {
+      background-color: darken($orange, 15);
+    }
+    &:focus {
+      background-color: darken($orange, 15);
+    }
+  }
+}
+input[type="text"].max {
+  margin-top: 1.5em;
+}
+
+
+// Filter/Search
+
+.filter {
+  background-color: $white;
+  padding: 1.125rem 10px 0 10px;
+  margin-bottom: 1.125rem;
 }
