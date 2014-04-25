@@ -210,23 +210,27 @@ ul {
       &.unavailable {
         border: 1px solid darken($white, 10);
         background: $white;
-        color: darken($white, 20);
+        color: $black;
+        a {
+          color: $black;
+        }
       }
       &.complete {
         border: 1px solid darken($success, 10);
         background: $success;
-        color: #fff;
+        color: $black;
         a {
-          color: #fff;
+          color: $black;
         }
       }
       &.current {
         background: $med-blue;
-        color: #fff;
+        color: $black;
         border: 1px solid lighten($med-blue, 10);
         font-weight: bold;
         a {
           background: transparent;
+          color: $black;
           &:hover {
             background: transparent;
           }
@@ -261,6 +265,9 @@ table {
       border-bottom: solid 1px $white;
     }
   }
+  tbody tr:nth-of-type(even) {
+    background: #efefef;
+  }
 }
 table.my-quote-table {
   width: 100%;
@@ -276,6 +283,7 @@ table.my-quote-table {
   .expander table {
     width: 100%;
     margin-bottom: 0px;
+    border: 1px solid darken($white, 10);
   }
   .label {
     width: 100%;
@@ -293,15 +301,63 @@ table.my-quote-table {
       font-weight: bold;
     }
   }
+  tbody tr:nth-child(even) {
+    background: #efefef;
+  }
+  tbody tr {
+    cursor: pointer;
+    &:hover {
+      background: darken($white, 5);
+    }
+  }
 }
 table.sku-table {
+  width: 100%;
+  .add-remove {
+    width: 7%;
+  }
+  .sku {
+    width: 14%;
+  }
+  .qty {
+    width: 7%;
+  }
+  .price {
+    width: 8%;
+  }
+  .button.tiny, input, select {
+    margin-bottom: 0;
+  }
+  .price-data {
+    text-align: right;
+  }
+}
 
+
+// Table Dropdown
+
+.f-dropdown {
+  .dd-content div {
+    padding: .4em .9375rem;
+  }
+  .dd-header {
+    border-bottom: 1px solid $white;
+  }
+  .alt {
+    background: $white;
+  }
+  .dd-status {
+    padding-top: 1em;
+  }
 }
 
 
 // Form Elements
 
 input {
+  &.button {
+    font-weight: bold;
+  }
   &.export {
   background-color: $white;
   border-color: darken($white, 10);
@@ -320,27 +376,38 @@ input {
     border: darken($white, 20);
     color: $black;
     &:hover {
-      background-color: darken($white, 20);
+      background-color: darken($white, 15);
       color: $black;
     }
     &:focus {
-      background-color: darken($white, 20);
+      background-color: darken($white, 15);
       color: $black;
     }
   }
   &.next {
     background-color: $orange;
     border: darken($orange, 10);
+    color: #fff;
     &:hover {
-      background-color: darken($orange, 15);
+      background-color: darken($orange, 10);
+      color: #fff;
     }
     &:focus {
-      background-color: darken($orange, 15);
+      background-color: darken($orange, 10);
+      color: #fff;
     }
   }
-}
-input[type="text"].max {
-  margin-top: 1.5em;
+  &.add, &.remove {
+    background-color: $orange;
+    border: darken($orange, 10);
+    font-weight: bold;
+    &:hover {
+      background-color: darken($orange, 10);
+    }
+    &:focus {
+      background-color: darken($orange, 10);
+    }
+  }
 }
 
 
@@ -350,4 +417,7 @@ input[type="text"].max {
   background-color: $white;
   padding: 1.125rem 10px 0 10px;
   margin-bottom: 1.125rem;
+  .value-filter {
+    padding-top: 2.05rem;
+  }
 }

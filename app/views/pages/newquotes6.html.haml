@@ -64,6 +64,41 @@
           %th.qty QTY
           %th.description Description
           %th.price Price
+      %tbody 
+        %tr 
+          %td 
+            %input.button.tiny.add{:type => "button", :value => "+"}/ 
+          %td 
+            %input{:type => "text"}/ 
+          %td 
+            %input{:type => "number", :size => "10", :name => "qty", :value => "1", :min => "1"}/ 
+          %td 
+          %td 
+        %tr 
+          %td 
+            %input.button.tiny.remove{:type => "button", :value => "-"}/ 
+          %td 
+            XXXXXXXXX
+          %td 
+            1  
+          %td 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, optio culpa atque tenetur esse odio tempora perferendis sequi repellat recusandae voluptatibus minima laboriosam. Maiores nobis harum reprehenderit vitae consectetur error.
+          %td.price-data 
+            $XXXXX.XX
+        %tr 
+          %td 
+          %td 
+          %td 
+          %td 
+            .bold.right Total:
+          %td 
+            .bold $XXXXXX.XX
+.row 
+  .small-12.medium-12.columns 
+    .row 
+      .small-5.medium-5.columns.end 
+        %input.button.small.back{:type => "button", :value => "Back"}/ 
+        %input.button.small.next{:type => "button", :value => "Next"}/ 
 .row 
   .small-2.medium-2.columns 
     %p.bold
@@ -88,6 +123,12 @@
       Email:
   .small-10.medium-10.columns
     %p email@email.com
+.row 
+  .small-2.medium-2.columns 
+    %p.bold
+      Opportunity:
+  .small-10.medium-10.columns
+    %p User's Choice
 .row 
   .small-2.medium-2.columns 
     %p.bold
