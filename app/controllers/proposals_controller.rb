@@ -1,6 +1,6 @@
 class ProposalsController < ApplicationController
 
-  before_filter :authenticate_user!
+  # before_filter :authenticate_user!
   before_filter :find_proposal, only: [:show, :edit, :update, :destroy, :reseller]
   before_filter :authorize_action
 
@@ -13,7 +13,10 @@ class ProposalsController < ApplicationController
   def destroy; end
 
   def reseller
-    
+  end
+
+  def confirmation
+    render :confirmation, layout: 'reseller'
   end
 
   private
@@ -23,7 +26,8 @@ class ProposalsController < ApplicationController
   end
 
   def authorize_action
-    raise Pundit::NotAuthorizedError unless ProposalPolicy.new(current_user, @proposal || ::Proposal.new).send("#{self.action_name}?")
+    # raise Pundit::NotAuthorizedError unless ::ProposalsPolicy.new(current_user, @proposal || ::Proposal.new).send("#{self.action_name}?")
+    raise Pundit::NotAuthorizedError unless ::ProposalsPolicy.new(nil, @proposal || ::Proposal.new).send("#{self.action_name}?")
   end
 
   def proposal_params()
