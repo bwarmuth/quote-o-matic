@@ -5,17 +5,41 @@
     %title Quote-O-Matic
     /[if lt IE 9]
       %script{:type => "text/javascript", :src => "http://html5shim.googlecode.com/svn/trunk/html5.js"}
-    = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag    "reseller", :media => "all"
     = csrf_meta_tags
     
   %body(data-controller="#{controller_name}" data-action="#{action_name}")
-    %div
-      HEADER
+    %div.reseller
+      %nav.top-bar{"data-topbar" => ""}
+        %ul.title-area-reseller 
+          %li 
+            %a{:href => "#"} 
+              = image_tag "bizco.png", {alt:"BizCo"}
     .container
       .row
         .small-12.columns
           = yield
-    .row
-      .small-12.columns
-        FOOTER
-    
+      .push 
+    %footer 
+      .row
+        .small-4.columns
+          %h4 Contact Us:
+        .small-4.columns.end
+          %h4 Our Location:
+      .row
+        .small-4.columns
+          %span 
+            %a{:href => "mailto:email@domain.com"} email@domain.com
+        .small-4.columns.end
+          %span 
+            Street Name
+      .row
+        .small-4.columns
+          %span 
+            (555) 314-1592
+        .small-4.columns
+          %span 
+            City, State, Zip
+        .small-4.columns
+          %span 
+            Copyright &copy; 2014

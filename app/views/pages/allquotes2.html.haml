@@ -17,7 +17,7 @@
         %a{:href => "#"} My Quote
       %dd 
         %a{:href => "#"} New Quotes
-      %dd.right.active 
+      %dd.right.opened 
         %a{:href => "#"} Advanced Options
       %dd.search.right 
         %input{:type => "text", :placeholder => "Filter/Search"}/ 
@@ -110,16 +110,17 @@
                 .small-6.columns.alt 
                   %span.dd-content-row $X,XXX.XX
               .row.dd-status 
-                .small-2.columns 
-                  %span.bold Status:
-                .small-7.columns.end
+                .small-3.columns
                   %span.bold Sent:
-                  Date
                   %br/ 
                   %span.bold Accepted:
-                  Date
                   %br/ 
                   %span.bold Completed:
+                .small-5.columns.end
+                  Date
+                  %br/ 
+                  Date
+                  %br/ 
                   Date
         %tr 
           %td #####

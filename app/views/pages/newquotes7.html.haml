@@ -13,9 +13,9 @@
     %dl.sub-nav 
       %dd 
         %a{:href => "#"} All Quotes
-      %dd.active 
-        %a{:href => "#"} My Quote
       %dd 
+        %a{:href => "#"} My Quote
+      %dd.active 
         %a{:href => "#"} New Quotes
       %dd.right 
         %a{:href => "#"} Filter/Search
@@ -54,52 +54,59 @@
 .row 
   .small-12.medium-12.columns 
     %p Instructional text goes here
-.row 
+.row.review 
   .small-2.medium-2.columns 
     %p.bold
       Quote Type:
   .small-10.medium-10.columns
     %p User's Choice
-.row 
+.row.review 
   .small-2.medium-2.columns 
     %p.bold
       Company:
   .small-10.medium-10.columns
     %p User's Choice
-.row 
+.row.review 
   .small-2.medium-2.columns 
     %p.bold
       Contact:
   .small-10.medium-10.columns
     %p User's Choice
-.row 
+.row.review 
   .small-2.medium-2.columns 
     %p.bold
       Email:
   .small-10.medium-10.columns
     %p email@email.com
-.row 
+.row.review 
   .small-2.medium-2.columns 
     %p.bold
       Opportunity:
   .small-10.medium-10.columns
     %p User's Choice
-.row 
+.row.review 
   .small-2.medium-2.columns 
     %p.bold
       Reseller:
   .small-10.medium-10.columns
     %p User's Choice
-.row 
+.row.review 
   .small-2.medium-2.columns 
     %p.bold
       SKUs:
   .small-2.medium-2.columns
-    %p User's Choice
+    %p SKU #
+  .small-1.medium-1.columns
+    %p Qty
   .small-4.medium-4.columns
-    %p User's Choice
-  .small-4.medium-4.columns
-    %p User's Choice
+    %p Description
+  .small-3.medium-3.columns
+    %p Price
+.row.review 
+  .small-1.columns.small-offset-8.columns
+    %p.bold Total:
+  .small-3.columns.columns 
+    %p $XXXXXXXXX.XX
 .row 
   .small-4.medium-4.columns.end 
     %input.button.small.back{:type => "button", :value => "Back"}/ 

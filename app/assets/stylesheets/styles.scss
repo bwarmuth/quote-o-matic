@@ -51,6 +51,10 @@ a {
 .top-bar-section {
   ul {
     background: transparent;
+    &.dropdown {
+      max-width: 7em;
+      min-width: 7em;
+    }
   }
   li:not(.has-form) a:not(.button) {
     background: transparent;
@@ -73,6 +77,14 @@ a {
     height: 100%;
     border-right: solid 1px #acaeb0;
     line-height: 38px;
+    &.opened {
+      background:$med-blue;
+      border-color: lighten($med-blue, 10);
+      color: #ffffff;
+      a {
+        color: #ffffff;
+      }
+    }
     &.search {
       width: 44%;
       input {
@@ -95,19 +107,21 @@ a {
         border-radius: 0;
         padding: 0 20px;
         display: block;
+        color: #ffffff;
         &:hover {
           background: $med-blue;
           border-radius: 0;
+          color: #ffffff;
         }
       }
     }
   }
   dd a {
-    color: $white;
+    color: #ffffff;
     text-decoration: none;
     padding: 0.1875rem 1rem;
     &:hover {
-      color: $white;
+      color: #ffffff;
     }
   }
 }
@@ -289,7 +303,7 @@ table.my-quote-table {
     width: 100%;
     font-size: 1em;
     &.accept {
-      background: $med-blue;
+      background: lighten($med-blue, 6);
       font-weight: bold;
     }
     &.sent {
@@ -337,6 +351,7 @@ table.sku-table {
 // Table Dropdown
 
 .f-dropdown {
+  box-shadow: 2px 2px 3px 0px rgba(51,51,51,.45);
   .dd-content div {
     padding: .4em .9375rem;
   }
@@ -348,6 +363,7 @@ table.sku-table {
   }
   .dd-status {
     padding-top: 1em;
+    border-top: 1px solid darken($white, 10);
   }
 }
 
@@ -355,6 +371,11 @@ table.sku-table {
 // Form Elements
 
 input {
+  &[type="text"] {
+    background-color: lighten($white, 10);
+    border: 1px solid darken($white, 15);
+    color: $black;
+  }
   &.button {
     font-weight: bold;
   }
@@ -407,7 +428,17 @@ input {
     &:focus {
       background-color: darken($orange, 10);
     }
+    &.button.tiny {
+      font-size: 1rem;
+      padding-top: .5rem;
+      padding-bottom: .5575rem;
+    }
   }
+}
+select {
+  background-color: lighten($white, 10);
+  border: 1px solid darken($white, 15);
+  color: $black;
 }
 
 

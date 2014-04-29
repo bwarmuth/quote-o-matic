@@ -1,3 +1,80 @@
+// Variables
+
+// Colors
+
+$white: #e6e6e6;
+$black: #333333;
+$dark-grey: #5f5f62;
+$med-blue: #7798c5;
+$orange: #f3901d;
+
+$success: #92C04E;
+$failure: #DB4931;
+
+// Fonts
+$main-font: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+$bold: bold;
+
+html, body {
+  height: 100%;
+}
 body {
-  background-color: pink;
+  font-family: $main-font;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: $med-blue;
+  &:hover {
+    color: $black;
+  }
+}
+
+
+// Reseller Customer Confirmation Pages
+.reseller .top-bar {
+  height: 85px;
+  background-color: $white;
+  ul>li a:not(.button) {
+    height: 61px;
+    line-height: 74px;
+    font-size: 13px;
+  }
+  img {
+    width: 150px;
+    vertical-align: middle;
+  }
+}
+
+.container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -130px;
+  padding-top: 1em;
+  h3 {
+    font-weight: bold;
+  }
+}
+
+footer {
+  background-color: $black;
+  color: $white;
+  padding: 1em 0 1.5em 0;
+  height: 130px;
+  h4 {
+    color: $white;
+    font-weight: bold;
+  }
+  span {
+    line-height: 1.4em;
+  }
+}
+.push {
+  height: 130px;
+}
+
+@media only screen and (max-width: 640px) {
+  footer span {
+    font-size: .8em;
+  }
 }
