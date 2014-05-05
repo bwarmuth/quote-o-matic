@@ -17,12 +17,12 @@
         %a{:href => "#"} My Quote
       %dd 
         %a{:href => "#"} New Quotes
-      -# %dd.right.opened 
-      -#   %a{:href => "#"} Advanced Options
+      %dd.right.opened 
+        %a{:href => "#"} Advanced Options
       %dd.search.right 
         %input{:type => "text", :placeholder => "Filter/Search"}/ 
 .row 
-  .small-12.columns 
+  .small-7.small-offset-5.columns 
     .filter  
       -# .row 
       -#   .small-6.medium-6.columns.end 
@@ -32,37 +32,45 @@
       -#     %input{:type => "radio", :name => "Sort Order", :value => "Descending", :id => "Descending"}/
       -#     %label{:for => "Descending"} Descending
       .row 
-        .small-4.medium-2.columns 
+        .small-4.medium-4.columns 
+          %label.bold{:for => "Status"} Status
+        .small-4.medium-4.columns 
+          %label.bold{:for => "Agent"} Agent
+        .small-4.medium-4.columns 
+          %label.bold{:for => "Company"} Company
+      .row 
+        .small-4.medium-4.columns 
           %select#Status{:name => "Status"} 
             %option{:value => "Select Status"} Select Status
             %option{:value => "First choice"} First Choice
-        .small-4.medium-2.columns 
+        .small-4.medium-4.columns 
           %select#Agent{:name => "Agent"} 
             %option{:value => "Select Agent"} Select Agent
             %option{:value => "First choice"} First Choice
         .small-4.medium-4.columns 
+          %select#Company{:name => "Company"} 
+            %option{:value => "Select Company"} Select Company
+            %option{:value => "First choice"} First Choice
+      .row 
+        .small-6.medium-6.columns 
           %input{:type => "radio", :name => "Status", :value => "Sent", :id => "Sent"}/
           %label.bold{:for => "Sent"} Sent
           %input{:type => "radio", :name => "Status", :value => "Accepted", :id => "Accepted"}/
           %label.bold{:for => "Accepted"} Accepted
           %input{:type => "radio", :name => "Status", :value => "Completed", :id => "Completed"}/
           %label.bold{:for => "Completed"} Completed
-        .small-4.medium-2.columns.value-filter 
-          %label.bold.value{:for => "Value"} Value
-        .small-4.medium-2.columns.value-filter
+        .small-3.medium-3.columns.value-filter 
+          %label.bold{:for => "Value"} Value
+        .small-3.medium-3.columns.value-filter
           %label{:for => "Value"} &nbsp;
       .row 
-        .small-4.medium-4.columns 
-          %select#Company{:name => "Company"} 
-            %option{:value => "Select Company"} Select Company
-            %option{:value => "First choice"} First Choice
-        .small-4.medium-2.columns 
+        .small-3.medium-3.columns 
           %input{:type => "text", :placeholder => "Date Picker Min"}/ 
-        .small-4.medium-2.columns 
+        .small-3.medium-3.columns 
           %input{:type => "text", :placeholder => "Date Picker Max"}/ 
-        .small-4.medium-2.columns.value-filter 
+        .small-3.medium-3.columns.value-filter 
           %input.min{:type => "text", :placeholder => "Min"}/
-        .small-4.medium-2.columns.value-filter
+        .small-3.medium-3.columns.value-filter
           %input.max{:type => "text", :placeholder => "Max"}/ 
 .row 
   .small-12.medium-12.columns 
@@ -114,20 +122,17 @@
                   %span.dd-content-row $X,XXX.XX
               .row.dd-status 
                 .small-3.columns
-                  %span.bold.sent 
-                    %i.fa.fa-envelope 
-                    Sent:
-                  %span Date
-                .small-4.columns
-                  %span.bold.accept 
-                    %i.fa.fa-thumbs-up
-                    Accepted:
-                  %span Date
-                .small-4.columns.end
-                  %span.bold.complete
-                    %i.fa.fa-check-square
-                    Completed:
-                  %span Date                  
+                  %span.bold Sent:
+                  %br/ 
+                  %span.bold Accepted:
+                  %br/ 
+                  %span.bold Completed:
+                .small-5.columns.end
+                  Date
+                  %br/ 
+                  Date
+                  %br/ 
+                  Date
         %tr 
           %td #####
           %td Customer Name

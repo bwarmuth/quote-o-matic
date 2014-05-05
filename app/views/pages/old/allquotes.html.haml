@@ -17,20 +17,20 @@
         %a{:href => "#"} My Quote
       %dd 
         %a{:href => "#"} New Quotes
-      %dd.right.opened 
+      %dd.right.active 
         %a{:href => "#"} Advanced Options
       %dd.search.right 
         %input{:type => "text", :placeholder => "Filter/Search"}/ 
 .row 
   .small-7.small-offset-5.columns 
     .filter  
-      -# .row 
-      -#   .small-6.medium-6.columns.end 
-      -#     %label.bold{:for => "Sort Order"} Sort Order
-      -#     %input{:type => "radio", :name => "Sort Order", :value => "Ascending", :id => "Ascending"}/
-      -#     %label{:for => "Ascending"} Ascending
-      -#     %input{:type => "radio", :name => "Sort Order", :value => "Descending", :id => "Descending"}/
-      -#     %label{:for => "Descending"} Descending
+      .row 
+        .small-12.medium-12.columns 
+          %label.bold{:for => "Sort Order"} Sort Order
+          %input{:type => "radio", :name => "Ascending", :value => "Ascending", :id => "Ascending"}/
+          %label{:for => "Ascending"} Ascending
+          %input{:type => "radio", :name => "Descending", :value => "Descending", :id => "Descending"}/
+          %label{:for => "Descending"} Descending
       .row 
         .small-4.medium-4.columns 
           %label.bold{:for => "Status"} Status
@@ -50,19 +50,16 @@
       .row 
         .small-6.medium-6.columns 
           %label.bold{:for => "Status"} Date
-          %input{:type => "radio", :name => "Status", :value => "Sent", :id => "Sent"}/
+          %input{:type => "radio", :name => "Sent", :value => "Sent", :id => "Sent"}/
           %label{:for => "Sent"} Sent
-          %input{:type => "radio", :name => "Status", :value => "Accepted", :id => "Accepted"}/
+          %input{:type => "radio", :name => "Accepted", :value => "Accepted", :id => "Accepted"}/
           %label{:for => "Accepted"} Accepted
-          %input{:type => "radio", :name => "Status", :value => "Completed", :id => "Completed"}/
+          %input{:type => "radio", :name => "Completed", :value => "Completed", :id => "Completed"}/
           %label{:for => "Completed"} Completed
-          %br/ 
-          %input{:type => "text", :placeholder => "Date Picker"}/ 
-        .small-3.medium-3.columns.value-filter 
+        .small-3.medium-3.columns 
           %label.bold{:for => "Value"} Value
           %input.min{:type => "text", :placeholder => "Min"}/
-        .small-3.medium-3.columns.value-filter
-          %label{:for => "Value"} &nbsp;
+        .small-3.medium-3.columns
           %input.max{:type => "text", :placeholder => "Max"}/ 
 .row 
   .small-12.medium-12.columns 
@@ -82,46 +79,34 @@
           %th.status 
             %a{:href => "#"} Status
       %tbody 
-        %tr{"data-dropdown" => "drop"} 
+        %tr 
           %td #####
           %td Customer Name
           %td 
-            %a{:href => "http://www.google.com"} Company Name 
-            -# links are not clickable when using dropdown on a table row, can we do anything about that?
+            %a{:href => "#"} Company Name 
           %td 
             %a{:href => "#"} Agent Name 
           %td $$$$$$$$$$$$
           %td 
             %span.label.accept Accepted 
-            #drop.f-dropdown.content.medium{"data-dropdown-content" => ""}
-              .row.dd-header.bold 
-                .small-6.columns 
-                  %span.dd-header-row Orders
-                .small-6.columns 
-                  %span.dd-header-row Itemized Value
-              .row.dd-content 
-                .small-6.columns 
-                  %span.dd-content-row XX-XXXX-XX
-                .small-6.columns 
-                  %span.dd-content-row $X,XXX.XX
-              .row.dd-content 
-                .small-6.columns.alt 
-                  %span.dd-content-row XX-XXXX-XX
-                .small-6.columns.alt 
-                  %span.dd-content-row $X,XXX.XX
-              .row.dd-status 
-                .small-3.columns
-                  %span.bold Sent:
-                  %br/ 
-                  %span.bold Accepted:
-                  %br/ 
-                  %span.bold Completed:
-                .small-5.columns.end
-                  Date
-                  %br/ 
-                  Date
-                  %br/ 
-                  Date
+        %tr.expander 
+          %td{:colspan => "3"} 
+          %td{:colspan => "3"} 
+            %table 
+              %thead
+                %tr 
+                  %th Orders
+                  %th Itemized Value
+                  %th Detailed Status
+              %tbody 
+                %tr 
+                  %td XX-XXXX-XX
+                  %td $X,XXX.XX
+                  %td Sent: Date
+                %tr 
+                  %td XX-XXXX-XX
+                  %td $X,XXX.XX
+                  %td Accepted: Date
         %tr 
           %td #####
           %td Customer Name

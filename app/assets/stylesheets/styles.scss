@@ -303,16 +303,28 @@ table.my-quote-table {
     width: 100%;
     font-size: 1em;
     &.accept {
-      background: lighten($med-blue, 6);
+      background: transparent;
       font-weight: bold;
+      text-align: left;
+      a {
+        color: lighten($med-blue, 6);
+      }
     }
     &.sent {
-      background: $orange;
+      background: transparent;
       font-weight: bold;
+      text-align: left;
+      a {
+        color: $orange;
+      }
     }
     &.complete {
-      background: $success;
+      background: transparent;
       font-weight: bold;
+      text-align: left;
+      a {
+        color: $success;
+      }
     }
   }
   tbody tr:nth-child(even) {
@@ -346,6 +358,9 @@ table.sku-table {
     text-align: right;
   }
 }
+.tooltip-text {
+  color: $black;
+}
 
 
 // Table Dropdown
@@ -365,16 +380,35 @@ table.sku-table {
     padding-top: 1em;
     border-top: 1px solid darken($white, 10);
   }
+  .complete {
+    color: $success;
+  }
+  .sent {
+    color: $orange;
+  }
+  .accept {
+    color: lighten($med-blue, 6);
+  }
 }
 
 
 // Form Elements
+
+label {
+  margin: 0 0 .3rem 0;
+  &.value {
+    margin-top: 1.2em;
+  }
+}
 
 input {
   &[type="text"] {
     background-color: lighten($white, 10);
     border: 1px solid darken($white, 15);
     color: $black;
+  }
+  &[type="radio"] {
+    margin: 2em 0 .3em 0;
   }
   &.button {
     font-weight: bold;
@@ -448,7 +482,4 @@ select {
   background-color: $white;
   padding: 1.125rem 10px 0 10px;
   margin-bottom: 1.125rem;
-  .value-filter {
-    padding-top: 2.05rem;
-  }
 }
