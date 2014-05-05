@@ -17,37 +17,35 @@
         %a{:href => "#"} My Quote
       %dd.active 
         %a{:href => "#"} New Quotes
-      %dd.right 
-        %a{:href => "#"} Filter/Search
 .row 
   .small-12.medium.12.columns 
     %ul.pagination.new-steps 
       %li.unavailable.complete 
-        %a{:href => "#"} 1
+        %span.circle 1
         %span.step-text 
-          Select Type
+          Type
       %li.unavailable.complete 
-        %a{:href => "#"} 2
+        %span.circle 2
         %span.step-text 
-          Select Company
+          Company
       %li.current 
-        %a{:href => "#"} 3
+        %span.circle 3
         %span.step-text 
-          Select Contact
+          Contact
       %li.unavailable 
-        %a{:href => "#"} 4
+        %span.circle 4
         %span.step-text 
-          Select Opportunity
+          Opportunity
       %li.unavailable 
-        %a{:href => "#"} 5
+        %span.circle 5
         %span.step-text 
-          Select Reseller
+          Reseller
       %li.unavailable 
-        %a{:href => "#"} 6
+        %span.circle 6
         %span.step-text 
-          Add SKUs
+          SKUs
       %li.unavailable 
-        %a{:href => "#"} 7
+        %span.circle 7
         %span.step-text 
           Complete
     %hr/ 
@@ -61,8 +59,8 @@
         .small-5.medium-5.columns 
           %input{:type => "text", :placeholder => "Contact Name"}/ 
         .small-7.medium-7.columns 
-          %input.button.small.back{:type => "button", :value => "Back"}/ 
-          %input.button.small.next{:type => "button", :value => "Next"}/ 
+          %input.button.tiny.back{:type => "button", :value => "Back"}/ 
+          %input.button.tiny.next{:type => "button", :value => "Next"}/ 
 .row.review 
   .small-2.medium-2.columns 
     %p.bold

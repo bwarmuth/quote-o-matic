@@ -17,37 +17,35 @@
         %a{:href => "#"} My Quote
       %dd.active 
         %a{:href => "#"} New Quotes
-      %dd.right 
-        %a{:href => "#"} Filter/Search
 .row 
   .small-12.medium.12.columns 
     %ul.pagination.new-steps 
       %li.current 
-        %a{:href => "#"} 1
+        %span.circle 1
         %span.step-text 
-          Select Type
+          Type
       %li.unavailable 
-        %a{:href => "#"} 2
+        %span.circle 2
         %span.step-text 
-          Select Company
+          Company
       %li.unavailable 
-        %a{:href => "#"} 3
+        %span.circle 3
         %span.step-text 
-          Select Contact
+          Contact
       %li.unavailable 
-        %a{:href => "#"} 4
+        %span.circle 4
         %span.step-text 
-          Select Opportunity
+          Opportunity
       %li.unavailable 
-        %a{:href => "#"} 5
+        %span.circle 5
         %span.step-text 
-          Select Reseller
+          Reseller
       %li.unavailable 
-        %a{:href => "#"} 6
+        %span.circle 6
         %span.step-text 
-          Add SKUs
+          SKUs
       %li.unavailable 
-        %a{:href => "#"} 7
+        %span.circle 7
         %span.step-text 
           Complete
     %hr/ 
@@ -63,5 +61,5 @@
             %option{:value => "Select Type"} Select Type
             %option{:value => "Type 1"} Type 1
         .small-7.medium-7.columns 
-          %input.button.small.back{:type => "button", :value => "Back"}/ 
-          %input.button.small.next{:type => "button", :value => "Next"}/ 
+          %input.button.tiny.back{:type => "button", :value => "Back"}/ 
+          %input.button.tiny.next{:type => "button", :value => "Next"}/ 
