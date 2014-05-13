@@ -1,0 +1,134 @@
+.row 
+  .small-12.medium-12.columns 
+    .alert-box.success{"data-alert" => ""} 
+      Success.
+      %a.close{:href => "#"} &times;
+.row 
+  .small-12.medium-12.columns 
+    .alert-box.failure{"data-alert" => ""} 
+      I AM ERROR.
+      %a.close{:href => "#"} &times;
+.row 
+  .small-12.medium-12.columns
+    %dl.sub-nav 
+      %dd 
+        %a{:href => "#"} All Quotes
+      %dd 
+        %a{:href => "#"} My Quote
+      %dd 
+        %a{:href => "#"} New Quotes
+      %dd.active 
+        %a{:href => "#"} Reseller Edit 
+.row.edit-title
+  .small-12.medium-12.columns
+    %h3.bold Reseller Creation and Editing
+.row.edit-reseller 
+  .small-3.medium-3.columns.end 
+    %a.button.small.new{:href => "#", "data-reveal-id" => "newmodal"} Create New Reseller
+.row.edit-dd 
+  .small-4.medium-4.columns 
+    %select#reseller-list{:name => "Select a Reseller"} 
+      %option{:value => "BizCo"} BizCo
+      %option{:value => "Reseller 2"} Reseller 2
+      %option{:value => "Reseller 3"} Reseller 3
+      %option{:value => "Reseller 4"} Reseller 4
+  .small-5.medium-5.columns.end
+    %a.button.tiny.edit{:href => "#", "data-reveal-id" => "editmodal"} Edit Reseller
+#newmodal.reveal-modal.medium{"data-reveal" => ""}
+  .row 
+    .small-12.columns 
+      %h3 Create New Reseller
+  .row 
+    .small-3.columns
+      %label.bold{:for => "Reseller"} Reseller Name
+    .small-9.columns 
+      %input{:type => "text", :placeholder => "Reseller Name"}/ 
+  .row 
+    .small-3.columns 
+      %label.bold{:for => "logo"} Upload Logo
+    .small-6.columns 
+      %input{:type => "text", :placeholder => "Header Image"}/
+    .small-3.columns 
+      %a.button.tiny{:href => "#"} Upload Logo
+  .row
+    .small-3.columns
+      %label.bold{:for => "Email"} Email Address 
+    .small-9.columns 
+      %input{:type => "text", :placeholder => "Email Address"}/ 
+  .row 
+    .small-3.columns 
+      %label.bold{:for => "Phone"} Phone Number  
+    .small-2.columns 
+      %input{:type => "text", :placeholder => "(XXX)"}/ 
+    .small-2.columns 
+      %input{:type => "text", :placeholder => "XXX"}/ 
+    .small-2.columns.end 
+      %input{:type => "text", :placeholder => "XXXX"}/ 
+  .row 
+    .small-3.columns 
+      %label.bold{:for => "Address"} Address
+    .small-9.columns
+      %input{:type => "text", :placeholder => "Street Address - ex: 123 Main St"}/ 
+  .row
+    .small-3.small-offset-3.columns
+      %input{:type => "text", :placeholder => "City"}/ 
+    .small-3.columns
+      %select#State{:name => "State"} 
+        %option{:value => "X"} State
+        %option{:value => "1"} State 1
+        %option{:value => "2"} State 2
+        %option{:value => "3"} State 3
+    .small-3.columns 
+      %input{:type => "text", :placeholder => "Zipcode"}/ 
+  .row 
+    .small-2.small-offset-10.columns 
+      %a.button.tiny.new{:href => "#"} Submit
+#editmodal.reveal-modal.medium{"data-reveal" => ""}
+  .row 
+    .small-12.columns 
+      %h3 Edit Reseller
+  .row 
+    .small-3.columns
+      %label.bold{:for => "Reseller"} Reseller Name
+    .small-9.columns 
+      %input{:type => "text", :placeholder => "Reseller Name"}/ 
+  .row 
+    .small-3.columns 
+      %label.bold{:for => "logo"} Upload Logo
+    .small-6.columns 
+      %input{:type => "text", :placeholder => "Header Image"}/
+    .small-3.columns 
+      %a.button.tiny{:href => "#"} Upload Logo
+  .row
+    .small-3.columns
+      %label.bold{:for => "Email"} Email Address 
+    .small-9.columns 
+      %input{:type => "text", :placeholder => "Email Address"}/ 
+  .row 
+    .small-3.columns 
+      %label.bold{:for => "Phone"} Phone Number  
+    .small-2.columns 
+      %input{:type => "text", :placeholder => "(XXX)"}/ 
+    .small-2.columns 
+      %input{:type => "text", :placeholder => "XXX"}/ 
+    .small-2.columns.end 
+      %input{:type => "text", :placeholder => "XXXX"}/ 
+  .row 
+    .small-3.columns 
+      %label.bold{:for => "Address"} Address
+    .small-9.columns
+      %input{:type => "text", :placeholder => "Street Address - ex: 123 Main St"}/ 
+  .row
+    .small-3.small-offset-3.columns
+      %input{:type => "text", :placeholder => "City"}/ 
+    .small-3.columns
+      %select#State{:name => "State"} 
+        %option{:value => "X"} State
+        %option{:value => "1"} State 1
+        %option{:value => "2"} State 2
+        %option{:value => "3"} State 3
+    .small-3.columns 
+      %input{:type => "text", :placeholder => "Zipcode"}/ 
+  .row 
+    .small-2.small-offset-10.columns 
+      %a.button.tiny.new{:href => "#"} Submit

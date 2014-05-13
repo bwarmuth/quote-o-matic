@@ -1,0 +1,92 @@
+.row 
+  .small-12.medium-12.columns 
+    .alert-box.success{"data-alert" => ""} 
+      Success.
+      %a.close{:href => "#"} &times;
+.row 
+  .small-12.medium-12.columns 
+    .alert-box.failure{"data-alert" => ""} 
+      I AM ERROR.
+      %a.close{:href => "#"} &times;
+.row 
+  .small-12.medium-12.columns
+    %dl.sub-nav 
+      %dd.active 
+        %a{:href => "#"} All Quotes
+      %dd 
+        %a{:href => "#"} My Quote
+      %dd 
+        %a{:href => "#"} New Quotes
+      -# %dd.right.opened 
+      -#   %a{:href => "#"} Advanced Options
+      %dd.search.right 
+        %input{:type => "text", :placeholder => "Filter/Search"}/ 
+.row.user-admin 
+  .small-12.medium-12.columns 
+    %table.my-quote-table.sortable 
+      %thead 
+        %tr 
+          %th.user-id 
+            %a{:href => "#"} ID 
+          %th.user 
+            %a{:href => "#"} User
+          %th.email 
+            %a{:href => "#"} Email
+          %th.admin-status 
+            %a{:href => "#"} Edit Status
+      %tbody 
+        %tr 
+          %td #####
+          %td User Name
+          %td email@email.com
+          %td
+            %select#admin-status{:name => "Status"} 
+              %option{:value => "User"} User
+              %option{:value => "Admin"} Admin 
+        %tr 
+          %td #####
+          %td User Name
+          %td email@email.com
+          %td
+            %select#admin-status{:name => "Status"} 
+              %option{:value => "User"} User
+              %option{:value => "Admin"} Admin 
+        %tr 
+          %td #####
+          %td User Name
+          %td email@email.com
+          %td
+            %select#admin-status{:name => "Status"} 
+              %option{:value => "User"} User
+              %option{:value => "Admin"} Admin 
+        %tr 
+          %td #####
+          %td User Name
+          %td email@email.com
+          %td
+            %select#admin-status{:name => "Status"} 
+              %option{:value => "User"} User
+              %option{:value => "Admin"} Admin 
+.row 
+  .small-10.medium-10.columns.end
+    %ul.pagination 
+      %li.arrow.unvailable 
+        %a{:href => "#"} &laquo; First
+      %li.arrow.unvailable 
+        %a{:href => "#"} &lsaquo; Prev
+      %li.current 
+        %a{:href => "#"} 1
+      %li 
+        %a{:href => "#"} 2
+      %li 
+        %a{:href => "#"} 3
+      %li.unavailable 
+        %a{:href => "#"} &hellip;
+      %li 
+        %a{:href => "#"} 12
+      %li 
+        %a{:href => "#"} 13
+      %li.arrow 
+        %a{:href => "#"} Next &rsaquo;
+      %li.arrow 
+        %a{:href => "#"} Last &raquo;

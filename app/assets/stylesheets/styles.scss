@@ -512,6 +512,55 @@ select {
   margin-bottom: 1.125rem;
 }
 
+// Reseller Edit Admin and User Admin
+
+.row.edit-title {
+  padding-top: 1em;
+}
+.row.edit-reseller, .row.user-admin {
+  padding-top: 1em;
+  margin-bottom: 1em;
+}
+.user-admin {
+  select {
+    margin: 0;
+  }
+  .user-id {
+    width: 125px;
+  }
+  .admin-status {
+    width: 250px;
+  }
+}
+.new {
+  background-color: $orange;
+  border: darken($orange, 10);
+  font-weight: bold;
+  &:hover {
+    background-color: darken($orange, 10);
+  }
+  &:focus {
+    background-color: darken($orange, 10);
+  }
+}
+.edit {
+  background-color: darken($white, 10);
+  border: darken($white, 20);
+  color: $black;
+  font-weight: bold;
+  &.button.tiny {
+    font-size: .8em;
+  }
+  &:hover {
+    background-color: darken($white, 15);
+    color: $black;
+  }
+  &:focus {
+    background-color: darken($white, 15);
+    color: $black;
+  }
+}
+
 
 // Media Queries
 
